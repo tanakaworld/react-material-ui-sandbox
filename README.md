@@ -1,5 +1,5 @@
 # react-material-ui-sandbox
-Sandbox for React + MatrialUI http://www.material-ui.com/
+Sandbox for React + Material-UI http://www.material-ui.com/
 
 # Get Started
 

@@ -1,7 +1,7 @@
 {
   "name": "react-material-ui-sandbox",
   "version": "1.0.0",
-  "description": "Sandbox for React + MatrialUI http://www.material-ui.com/",
+  "description": "Sandbox for React + Material-UI http://www.material-ui.com/",
   "main": "index.js",
   "author": "tanakaworld <yutaro.tanaka.world@gmail.com>",
   "license": "MIT",
