@@ -17,6 +17,7 @@ import '../styles/main.sass';
 
 import Home from './Home.jsx';
 import About from './About.jsx';
+import DatePicker from './DatePicker';
 
 const routes = [
     {
@@ -29,6 +30,11 @@ const routes = [
         path: '/about',
         sidebar: () => <div>about!</div>,
         main: () => <About/>
+    },
+    {
+        path: '/date_picker',
+        sidebar: () => <div>DatePicker!</div>,
+        main: () => <DatePicker/>
     }
 ];
 
@@ -42,6 +48,7 @@ export default class App extends React.Component {
                             <ul>
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/about">About</Link></li>
+                                <li><Link to="/date_picker">DatePicker</Link></li>
                             </ul>
 
                             {routes.map((route, index) => (
