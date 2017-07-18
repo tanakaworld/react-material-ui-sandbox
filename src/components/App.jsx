@@ -7,6 +7,12 @@ import {
     Link
 } from 'react-router-dom'
 
+// mui
+import {CircularProgress} from 'material-ui'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+import {MuiThemeProvider, getMuiTheme} from 'material-ui/styles'
+injectTapEventPlugin()
+
 import '../styles/main.sass';
 
 import Home from './Home.jsx';
@@ -29,36 +35,38 @@ const routes = [
 export default class App extends React.Component {
     render() {
         return (
-            <Router>
-                <div style={{display: 'flex'}}>
-                    <div id="side-bar">
-                        <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/about">About</Link></li>
-                        </ul>
+            <MuiThemeProvider muiTheme={getMuiTheme()}>
+                <Router>
+                    <div style={{display: 'flex'}}>
+                        <div id="side-bar">
+                            <ul>
+                                <li><Link to="/">Home</Link></li>
+                                <li><Link to="/about">About</Link></li>
+                            </ul>
 
-                        {routes.map((route, index) => (
-                            <Route
-                                key={index}
-                                path={route.path}
-                                exact={route.exact}
-                                component={route.sidebar}
-                            />
-                        ))}
-                    </div>
+                            {routes.map((route, index) => (
+                                <Route
+                                    key={index}
+                                    path={route.path}
+                                    exact={route.exact}
+                                    component={route.sidebar}
+                                />
+                            ))}
+                        </div>
 
-                    <div id="content-area">
-                        {routes.map((route, index) => (
-                            <Route
-                                key={index}
-                                path={route.path}
-                                exact={route.exact}
-                                component={route.main}
-                            />
-                        ))}
+                        <div id="content-area">
+                            {routes.map((route, index) => (
+                                <Route
+                                    key={index}
+                                    path={route.path}
+                                    exact={route.exact}
+                                    component={route.main}
+                                />
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </Router>
+                </Router>
+            </MuiThemeProvider>
         );
     }
 }
