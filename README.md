@@ -1,5 +1,5 @@
-# react-webpack-template
-Minimum template for using React + Webpack + Babel + Sass + gh-pages
+# react-material-ui-sandbox
+Sandbox for React + MatrialUI http://www.material-ui.com/
 
 # Get Started
 
